@@ -60,9 +60,11 @@ This project is designed to scrape menu images from Google Images for restaurant
     db.create_all()
     exit()
 ## Usage
-Run the Flask application:
+**Run the Flask application**:
+
     ```bash
         python app.py
+    ```
 
 **Access the web interface**:
 
@@ -86,11 +88,13 @@ Cleaning Up
 To delete the scraped images:
 
     ```bash
-        curl -X POST http://0.0.0.0:8000/delete_images
+    curl -X POST http://0.0.0.0:8000/delete_images
+    ```
 
-    ```   
+**Project Structure**:  
+
     ```bash 
-        Project Structure
+        
         .
         ├── app.py                # Main application file with routes and functions
         ├── templates/            # HTML templates for the web interface
