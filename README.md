@@ -85,37 +85,37 @@ Go to the OCR results page to view the extracted items and prices.
 Cleaning Up
 To delete the scraped images:
 
-```bash
-    curl -X POST http://0.0.0.0:8000/delete_images
-    Project Structure
-    .
-    ├── app.py                # Main application file with routes and functions
-    ├── templates/            # HTML templates for the web interface
-    │   ├── index.html
-    │   ├── result.html
-    │   ├── result_with_ocr.html
-    ├── static/               # Directory for static files like scraped images
-    │   ├── scrappedimgs/
-    ├── scrapper.log          # Log file for scraping activities
-    ├── mydb.db               # SQLite database file
-    ├── requirements.txt      # List of required Python packages
-    ├── README.md             # Project documentation
+    ```bash
+        curl -X POST http://0.0.0.0:8000/delete_images
 
+    ```   
+    ```bash 
+        Project Structure
+        .
+        ├── app.py                # Main application file with routes and functions
+        ├── templates/            # HTML templates for the web interface
+        │   ├── index.html
+        │   ├── result.html
+        │   ├── result_with_ocr.html
+        ├── static/               # Directory for static files like scraped images
+        │   ├── scrappedimgs/
+        ├── scrapper.log          # Log file for scraping activities
+        ├── mydb.db               # SQLite database file
+        ├── requirements.txt      # List of required Python packages
+        ├── README.md             # Project documentation
+    ```
 **Regular Expressions for OCR Extraction**:
 
 The code uses the following regular expression to extract menu items and prices:
 
-```bash
-    pattern = re.compile(r'([a-zA-Z\s\./|:]+)\s*(\d+(?:[\.,]\d+)?(?:/-)?)')
-
+    ```bash
+        pattern = re.compile(r'([a-zA-Z\s\./|:]+)\s*(\d+(?:[\.,]\d+)?(?:/-)?)')
+    ```
 Item Names: Consist of alphabetic characters, spaces, dots, slashes, pipes, or colons.
 Prices: Numeric values that may include commas, periods, or dashes.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-**Acknowledgements**
+## Acknowledgements
 - Flask
 - Tesseract OCR
 - Selenium
